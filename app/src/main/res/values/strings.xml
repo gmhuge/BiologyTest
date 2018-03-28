@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Biology Test</string>
+    <string name="biology_quiz">Biology Quiz</string>
+    <string name="start">Start</string>
+    <string name="question_i">Question I.</string>
+    <string name="read_and_make_correct_answer">Read and make correct answer:</string>
 </resources>
