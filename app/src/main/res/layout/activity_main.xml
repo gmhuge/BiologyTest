@@ -12,341 +12,347 @@
         android:layout_height="match_parent"
         android:fillViewport="true"
         android:visibility="visible">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorPrimary"
-        android:orientation="vertical">
 
-        <ImageView
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:alpha="0.7"
-            android:scaleType="fitCenter"
-            android:src="@drawable/pic_title" />
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:padding="16dp"
-            android:text="@string/biology_quiz"
-            android:textSize="36sp"
-            android:textStyle="bold" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.7"
+                android:scaleType="fitCenter"
+                android:src="@drawable/pic_title" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="24dp"
-            android:text="@string/start" />
-    </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="16dp"
+                android:text="@string/biology_quiz"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="24dp"
+                android:text="@string/start"
+                android:onClick="nextQuiz"/>
+        </RelativeLayout>
     </ScrollView>
+
     <ScrollView
+        android:id="@+id/quiz1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
         android:visibility="gone">
 
         <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-
-        <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:alpha="0.3"
-            android:scaleType="centerCrop"
-            android:src="@drawable/pic1" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/title1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:text="@string/question_i"
-            android:textSize="24sp"
-            android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/todo1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/title1"
-            android:padding="16dp"
-            android:text="@string/read_and_make_correct_answer" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.3"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pic1" />
 
-        <TextView
-            android:id="@+id/question1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/todo1"
-            android:padding="16dp"
-            android:text="What does 'DNA' stand for?"
-            android:textSize="22sp"
-            android:textStyle="italic" />
-
-        <RadioGroup
-            android:id="@+id/radio1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/question1"
-            android:padding="16dp">
-
-            <RadioButton
+            <TextView
+                android:id="@+id/title1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Don't Nod Again" />
+                android:padding="16dp"
+                android:text="@string/question_i"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-            <RadioButton
+            <TextView
+                android:id="@+id/todo1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="deoxyribonucleic acid" />
+                android:layout_below="@id/title1"
+                android:padding="16dp"
+                android:text="@string/read_and_make_correct_answer" />
 
-            <RadioButton
+            <TextView
+                android:id="@+id/question1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Diversified Nucleotide Acid" />
+                android:layout_below="@id/todo1"
+                android:padding="16dp"
+                android:text="What does 'DNA' stand for?"
+                android:textSize="22sp"
+                android:textStyle="italic" />
 
-            <RadioButton
+            <RadioGroup
+                android:id="@+id/radio1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="diverse nucleotide agent" />
-        </RadioGroup>
+                android:layout_below="@id/question1"
+                android:padding="16dp">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@id/radio1"
-            android:layout_marginLeft="24dp"
-            android:layout_marginTop="24dp"
-            android:background="#d50000"
-            android:text="Submit" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don't Nod Again" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/radio1"
-            android:layout_marginRight="24dp"
-            android:layout_marginTop="24dp"
-            android:text="Next" />
-    </RelativeLayout>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="deoxyribonucleic acid" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Diversified Nucleotide Acid" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="diverse nucleotide agent" />
+            </RadioGroup>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/radio1"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:background="#d50000"
+                android:text="Submit" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/radio1"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="24dp"
+                android:text="Next"
+                android:onClick="nextQuiz"/>
+        </RelativeLayout>
     </ScrollView>
 
     <ScrollView
+        android:id="@+id/quiz2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
         android:visibility="visible">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <ImageView
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:alpha="0.3"
-            android:scaleType="centerCrop"
-            android:adjustViewBounds="true"
-            android:src="@drawable/pic2" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/title2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:text="Question II."
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0.3"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pic2" />
 
-        <TextView
-            android:id="@+id/todo2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/title2"
-            android:padding="16dp"
-            android:text="Read and make correct answer:" />
-
-        <TextView
-            android:id="@+id/question2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/todo2"
-            android:padding="16dp"
-            android:text="Which of the following is found within mitochondria?"
-            android:textSize="22sp"
-            android:textStyle="italic" />
-
-        <RadioGroup
-            android:id="@+id/radio2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/question2"
-            android:padding="16dp">
-
-            <RadioButton
+            <TextView
+                android:id="@+id/title2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="cristae" />
+                android:padding="16dp"
+                android:text="Question II."
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-            <RadioButton
+            <TextView
+                android:id="@+id/todo2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Golgi apparatus" />
+                android:layout_below="@id/title2"
+                android:padding="16dp"
+                android:text="Read and make correct answer:" />
 
-            <RadioButton
+            <TextView
+                android:id="@+id/question2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="endoplasmic reticulum" />
+                android:layout_below="@id/todo2"
+                android:padding="16dp"
+                android:text="Which of the following is found within mitochondria?"
+                android:textSize="22sp"
+                android:textStyle="italic" />
 
-            <RadioButton
+            <RadioGroup
+                android:id="@+id/radio2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="patella" />
-        </RadioGroup>
+                android:layout_below="@id/question2"
+                android:padding="16dp">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@id/radio2"
-            android:layout_marginLeft="24dp"
-            android:layout_marginTop="24dp"
-            android:background="#d50000"
-            android:text="Submit" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cristae" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/radio2"
-            android:layout_marginRight="24dp"
-            android:layout_marginTop="24dp"
-            android:text="Next" />
-    </RelativeLayout>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Golgi apparatus" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="endoplasmic reticulum" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="patella" />
+            </RadioGroup>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/radio2"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:background="#d50000"
+                android:text="Submit" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/radio2"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="24dp"
+                android:text="Next"
+                android:onClick="nextQuiz"/>
+        </RelativeLayout>
     </ScrollView>
 
 
     <ScrollView
+        android:id="@+id/quiz3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
         android:visibility="gone">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <ImageView
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:alpha="0.3"
-            android:scaleType="centerCrop"
-            android:adjustViewBounds="true"
-            android:src="@drawable/pic3" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/title3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:text="Question III."
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0.3"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pic3" />
+
+            <TextView
+                android:id="@+id/title3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Question III."
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
 
-        <TextView
-            android:id="@+id/todo3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/title3"
-            android:padding="16dp"
-            android:text="Choose all correct answers:" />
+            <TextView
+                android:id="@+id/todo3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title3"
+                android:padding="16dp"
+                android:text="Choose all correct answers:" />
 
-        <TextView
-            android:id="@+id/question3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/todo3"
-            android:padding="16dp"
-            android:text="What else can bacteria (such as E. coli) use sugars for besides energy? "
-            android:textSize="22sp"
-            android:textStyle="italic" />
+            <TextView
+                android:id="@+id/question3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/todo3"
+                android:padding="16dp"
+                android:text="What else can bacteria (such as E. coli) use sugars for besides energy? "
+                android:textSize="22sp"
+                android:textStyle="italic" />
 
-        <TableLayout
-            android:id="@+id/table3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/question3"
-            android:padding="16dp">
+            <TableLayout
+                android:id="@+id/table3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question3"
+                android:padding="16dp">
 
-            <TableRow>
+                <TableRow>
 
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="carbon source to build amino acids" />
-            </TableRow>
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="carbon source to build amino acids" />
+                </TableRow>
 
-            <TableRow>
+                <TableRow>
 
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="carbon source to make vitamins" />
-            </TableRow>
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="carbon source to make vitamins" />
+                </TableRow>
 
-            <TableRow>
+                <TableRow>
 
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="nitrogen source for making a nucleic acid's base" />
-            </TableRow>
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="nitrogen source for making a nucleic acid's base" />
+                </TableRow>
 
-            <TableRow>
+                <TableRow>
 
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="sulfur source for making cysteine (an amino acid)" />
-            </TableRow>
-        </TableLayout>
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="sulfur source for making cysteine (an amino acid)" />
+                </TableRow>
+            </TableLayout>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@id/table3"
-            android:layout_marginLeft="24dp"
-            android:layout_marginTop="24dp"
-            android:background="#d50000"
-            android:text="Submit" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/table3"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:background="#d50000"
+                android:text="Submit" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/table3"
-            android:layout_marginRight="24dp"
-            android:layout_marginTop="24dp"
-            android:text="Next" />
-    </RelativeLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/table3"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="24dp"
+                android:text="Next"
+                android:onClick="nextQuiz"/>
+        </RelativeLayout>
     </ScrollView>
 
-
-
-
-
     <ScrollView
+        android:id="@+id/quiz4"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
@@ -403,6 +409,7 @@
                 android:padding="16dp">
 
                 <TableRow>
+
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -410,6 +417,7 @@
                 </TableRow>
 
                 <TableRow>
+
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -417,6 +425,7 @@
                 </TableRow>
 
                 <TableRow>
+
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -424,6 +433,7 @@
                 </TableRow>
 
                 <TableRow>
+
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -449,7 +459,8 @@
                 android:layout_below="@id/table4"
                 android:layout_marginRight="24dp"
                 android:layout_marginTop="24dp"
-                android:text="Next" />
+                android:text="Next"
+                android:onClick="nextQuiz"/>
 
 
         </RelativeLayout>
