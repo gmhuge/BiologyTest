@@ -313,6 +313,7 @@
                 <TableRow>
 
                     <CheckBox
+                        android:id="@+id/check3_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="carbon source to build amino acids" />
@@ -321,6 +322,7 @@
                 <TableRow>
 
                     <CheckBox
+                        android:id="@+id/check3_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="carbon source to make vitamins" />
@@ -329,6 +331,7 @@
                 <TableRow>
 
                     <CheckBox
+                        android:id="@+id/check3_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="nitrogen source for making a nucleic acid's base" />
@@ -337,6 +340,7 @@
                 <TableRow>
 
                     <CheckBox
+                        android:id="@+id/check3_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="sulfur source for making cysteine (an amino acid)" />
@@ -351,7 +355,8 @@
                 android:layout_below="@id/table3"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="24dp"
-                android:text="Submit" />
+                android:text="Submit"
+                android:onClick="submitQuiz"/>
 
             <Button
                 android:id="@+id/next3"
