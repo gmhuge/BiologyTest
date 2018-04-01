@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -155,7 +155,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -377,11 +377,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
-        android:visibility="gone">
+        android:visibility="visible">
 
 
         <RelativeLayout
-            android:id="@+id/r4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -392,7 +391,7 @@
                 android:adjustViewBounds="true"
                 android:alpha="0.3"
                 android:scaleType="centerCrop"
-                android:src="@drawable/pic2" />
+                android:src="@drawable/pic4" />
 
             <TextView
                 android:id="@+id/title4"
@@ -410,7 +409,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/title4"
                 android:padding="16dp"
-                android:text="Choose all correct answers:" />
+                android:text="Write a correct answer:" />
 
             <TextView
                 android:id="@+id/question4"
@@ -418,67 +417,33 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/todo4"
                 android:padding="16dp"
-                android:text="What else can bacteria (such as E. coli) use sugars for besides energy? "
+                android:text="Linstowiids are a tapeworm parasite found in the mouse opossum, a marsupial from South America. Where is the only other place that linstowiid tapeworms are found?"
                 android:textSize="22sp"
                 android:textStyle="italic" />
 
-            <TableLayout
-                android:id="@+id/table4"
-                android:layout_width="wrap_content"
+            <EditText
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/question4"
-                android:padding="16dp">
-
-                <TableRow>
-
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="carbon source to build amino acids" />
-                </TableRow>
-
-                <TableRow>
-
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="carbon source to make vitamins" />
-                </TableRow>
-
-                <TableRow>
-
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="nitrogen source for making a nucleic acid's base" />
-                </TableRow>
-
-                <TableRow>
-
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="sulfur source for making cysteine (an amino acid)" />
-                </TableRow>
-            </TableLayout>
-
+                android:id="@+id/edit4"
+                android:layout_below="@id/question4"/>
 
             <Button
                 android:id="@+id/quiz4submit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_below="@id/table4"
+                android:layout_below="@id/edit4"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="24dp"
-                android:text="Submit" />
+                android:text="Submit"
+                android:onClick="submitQuiz"/>
 
             <Button
                 android:id="@+id/next4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_below="@id/table4"
+                android:layout_below="@id/edit4"
                 android:layout_marginRight="24dp"
                 android:layout_marginTop="24dp"
                 android:text="Next"

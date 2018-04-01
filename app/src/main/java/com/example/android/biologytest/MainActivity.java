@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.ScrollView;
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     int count;
     RadioGroup radio1;
     RadioGroup radio2;
-
+    EditText edit4;
 
     int[] quizes = {R.id.quiz0,R.id.quiz1,R.id.quiz2,R.id.quiz3,R.id.quiz4};
     ScrollView[] quizViews = new ScrollView[MAX_QUIZ_NUMBER_VALUE+1];
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         radio2 = findViewById(R.id.radio2);
         radio1.clearCheck();
         radio2.clearCheck();
+ //       edit4.setText("");
 
         clearCheckBox(R.id.check3_1);
         clearCheckBox(R.id.check3_2);
@@ -87,6 +89,10 @@ public class MainActivity extends AppCompatActivity {
                 int[] correctAnswersId3 = {R.id.check3_1, R.id.check3_2,0,0};
                 checkBox4submit(R.id.quiz3submit,checkedBoxId3,R.id.next3,correctAnswersId3);
                 break;
+            case R.id.quiz4submit:
+                checkEditText4submit(R.id.quiz4submit, edit4, R.id.next4, "australia");
+                break;
+
         }
 
     }
@@ -128,6 +134,9 @@ public class MainActivity extends AppCompatActivity {
             correctAnswers++;
             submitFlag = true;
         }
+        else if (checkedBoxId[0] == 0 && checkedBoxId[1] == 0 && checkedBoxId[2] == 0 && checkedBoxId[3] == 0) {
+            Toast.makeText(getApplicationContext(), "Please select answer", Toast.LENGTH_SHORT).show();
+        }
         else {
             buttonSubmit.setText("WRONG");
             buttonSubmit.setBackgroundColor(Color.RED);
@@ -153,5 +162,29 @@ public class MainActivity extends AppCompatActivity {
     private void  clearCheckBox (int checkBoxId) {
         CheckBox checkBox = findViewById(checkBoxId);
         checkBox.setChecked(false);
+    }
+
+    private void checkEditText4submit (int submButtontId, EditText edit, int nextButtonId, String correctAnswer) {
+        boolean submitFlag = false;
+        Button buttonSubmit = findViewById(submButtontId);
+        Button buttonNext = findViewById(nextButtonId);
+        if (edit.getText().toString().toLowerCase().trim().equals(correctAnswer)) {
+            buttonSubmit.setText("RIGHT");
+            buttonSubmit.setBackgroundColor(Color.GREEN);
+            correctAnswers++;
+            submitFlag = true;
+        }
+        else if (edit.getText().toString().toLowerCase().trim().equals("")) {
+            Toast.makeText(getApplicationContext(), "Please select answer", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            buttonSubmit.setText("WRONG");
+            buttonSubmit.setBackgroundColor(Color.RED);
+            submitFlag = true;
+        }
+        if (submitFlag) {
+            buttonSubmit.setClickable(false);
+            buttonNext.setVisibility(View.VISIBLE);
+        }
     }
 }
