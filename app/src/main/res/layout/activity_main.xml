@@ -377,7 +377,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
-        android:visibility="visible">
+        android:visibility="gone">
 
 
         <RelativeLayout
@@ -449,6 +449,183 @@
                 android:text="Next"
                 android:visibility="gone"
                 android:onClick="nextQuiz"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/quiz5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0.3"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pic5" />
+
+            <TextView
+                android:id="@+id/title5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Question V."
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/todo5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title5"
+                android:padding="16dp"
+                android:text="Choose all correct answers:" />
+
+            <TextView
+                android:id="@+id/question5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/todo5"
+                android:padding="16dp"
+                android:text="Which of the following are true?"
+                android:textSize="22sp"
+                android:textStyle="italic" />
+
+            <TableLayout
+                android:id="@+id/table5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question5"
+                android:padding="16dp">
+
+                <TableRow>
+
+                    <CheckBox
+                        android:id="@+id/check5_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="we all have normal tumor suppressor genes" />
+                </TableRow>
+
+                <TableRow>
+
+                    <CheckBox
+                        android:id="@+id/check5_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="mutations in tumor suppressor genes can contribute to cancer" />
+                </TableRow>
+
+                <TableRow>
+
+                    <CheckBox
+                        android:id="@+id/check5_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="we all have mutations in our genome" />
+                </TableRow>
+
+                <TableRow>
+
+                    <CheckBox
+                        android:id="@+id/check5_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="mutations in any gene can contribute to cancer" />
+                </TableRow>
+            </TableLayout>
+
+            <Button
+                android:id="@+id/quiz5submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/table5"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:text="Submit"
+                android:onClick="submitQuiz"/>
+
+            <Button
+                android:id="@+id/next5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/table5"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="24dp"
+                android:text="See Result"
+                android:visibility="gone"
+                android:onClick="nextQuiz"/>
+        </RelativeLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/quiz6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0.3"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pic_results" />
+
+            <TextView
+                android:id="@+id/title6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Results:"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/todo6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title6"
+                android:padding="16dp"
+                android:textSize="56sp"
+                android:text="0/0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/todo6"
+                android:padding="16dp"
+                android:text="Congratulations! You correctly answered 5 of 5 questions"
+                android:textSize="22sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="24dp"
+                android:text="Start again"
+                android:onClick="startAgain"/>
 
 
         </RelativeLayout>
