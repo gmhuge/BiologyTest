@@ -1,8 +1,6 @@
 package com.example.android.biologytest;
 
-import android.content.Context;
 import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -11,6 +9,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.ScrollView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Arrays;
@@ -61,6 +60,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         clearButtons(R.id.quiz1submit, R.id.next1);
+        clearButtons(R.id.quiz2submit, R.id.next2);
+        clearButtons(R.id.quiz3submit, R.id.next3);
+        clearButtons(R.id.quiz4submit, R.id.next4);
+        clearButtons(R.id.quiz5submit, R.id.next5);
 
         activateQuizView(0);
     }
@@ -75,6 +78,11 @@ public class MainActivity extends AppCompatActivity {
     public void nextQuiz(View view) {
         if (quizStatus < MAX_QUIZ_NUMBER_VALUE) {
             quizStatus++;
+
+            if (quizStatus == MAX_QUIZ_NUMBER_VALUE) {
+                seeResults();
+            }
+
             activateQuizView(quizStatus);
         }
     }
@@ -120,14 +128,14 @@ public class MainActivity extends AppCompatActivity {
         Button buttonSubmit = findViewById(submButtontId);
         Button buttonNext = findViewById(nextButtonId);
         if (checkedRadioId == correctAnswerId) {
-            buttonSubmit.setText("RIGHT");
+            buttonSubmit.setText(R.string.answer_right);
             buttonSubmit.setBackgroundColor(Color.GREEN);
             correctAnswers++;
             submitFlag = true;
         } else if (checkedRadioId == -1) {
             Toast.makeText(getApplicationContext(), "Please select answer", Toast.LENGTH_SHORT).show();
         } else {
-            buttonSubmit.setText("WRONG");
+            buttonSubmit.setText(R.string.answer_wrong);
             buttonSubmit.setBackgroundColor(Color.RED);
             submitFlag = true;
         }
@@ -144,14 +152,14 @@ public class MainActivity extends AppCompatActivity {
         Button buttonNext = findViewById(nextButtonId);
 
         if (Arrays.equals(checkedBoxId, correctAnswerId)) {
-            buttonSubmit.setText("RIGHT");
+            buttonSubmit.setText(R.string.answer_right);
             buttonSubmit.setBackgroundColor(Color.GREEN);
             correctAnswers++;
             submitFlag = true;
         } else if (checkedBoxId[0] == 0 && checkedBoxId[1] == 0 && checkedBoxId[2] == 0 && checkedBoxId[3] == 0) {
             Toast.makeText(getApplicationContext(), "Please select answer", Toast.LENGTH_SHORT).show();
         } else {
-            buttonSubmit.setText("WRONG");
+            buttonSubmit.setText(R.string.answer_wrong);
             buttonSubmit.setBackgroundColor(Color.RED);
             submitFlag = true;
         }
@@ -185,14 +193,14 @@ public class MainActivity extends AppCompatActivity {
         editTextValue = edit.getText().toString().toLowerCase().trim();
 
         if (editTextValue.equals(correctAnswer)) {
-            buttonSubmit.setText("RIGHT");
+            buttonSubmit.setText(R.string.answer_right);
             buttonSubmit.setBackgroundColor(Color.GREEN);
             correctAnswers++;
             submitFlag = true;
         } else if (editTextValue.equals("")) {
             Toast.makeText(getApplicationContext(), "Please type answer", Toast.LENGTH_SHORT).show();
         } else {
-            buttonSubmit.setText("WRONG");
+            buttonSubmit.setText(R.string.answer_wrong);
             buttonSubmit.setBackgroundColor(Color.RED);
             submitFlag = true;
         }
@@ -202,15 +210,45 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void startAgain (View view) {
+    public void startAgain(View view) {
         initialize();
     }
 
-    private void clearButtons (int submitButtonId, int nextButtonId) {
+    private void clearButtons(int submitButtonId, int nextButtonId) {
         Button submitButton = findViewById(submitButtonId);
         Button nextButton = findViewById(nextButtonId);
 
-        submitButton.getBackground().setColorFilter(Color.parseColor("#1cd000"), PorterDuff.Mode.MULTIPLY);
+        submitButton.setBackgroundColor(Color.LTGRAY);
+        submitButton.setText("SUBMIT");
+        submitButton.setClickable(true);
+
+        nextButton.setVisibility(View.INVISIBLE);
+    }
+
+    private void seeResults() {
+        TextView resultsText = findViewById(R.id.score_results);
+        TextView remarkText = findViewById(R.id.remark_results);
+        String scoreRemark;
+
+        String numberOfQuiz = Integer.toString(MAX_QUIZ_NUMBER_VALUE - 1);
+        String numberOfCorrectAnswers = Integer.toString(correctAnswers);
+        String score = numberOfCorrectAnswers.concat("/");
+        score = score.concat(numberOfQuiz);
+        resultsText.setText(score);
+
+        if (correctAnswers == MAX_QUIZ_NUMBER_VALUE - 1) {
+            scoreRemark = "Congratulations! You correctly answered all questions.";
+        } else if (correctAnswers == 0) {
+            scoreRemark = "Unfortunately, you did not answer correctly any questions ...";
+        } else {
+            scoreRemark = "You correctly answered ";
+            scoreRemark = scoreRemark.concat(numberOfCorrectAnswers);
+            scoreRemark = scoreRemark.concat(" of ");
+            scoreRemark = scoreRemark.concat(numberOfQuiz);
+            scoreRemark = scoreRemark.concat(" questions.");
+        }
+        remarkText.setText(scoreRemark);
 
     }
+
 }

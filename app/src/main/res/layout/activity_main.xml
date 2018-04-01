@@ -89,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/todo1"
                 android:padding="16dp"
-                android:text="What does 'DNA' stand for?"
+                android:text="@string/question1"
                 android:textSize="22sp"
                 android:textStyle="italic" />
 
@@ -104,25 +104,25 @@
                     android:id="@+id/radio1_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Don't Nod Again" />
+                    android:text="@string/answer1_1" />
 
                 <RadioButton
                     android:id="@+id/radio1_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="deoxyribonucleic acid" />
+                    android:text="@string/answer1_2" />
 
                 <RadioButton
                     android:id="@+id/radio1_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Diversified Nucleotide Acid" />
+                    android:text="@string/answer1_3" />
 
                 <RadioButton
                     android:id="@+id/radio1_4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="diverse nucleotide agent" />
+                    android:text="@string/answer1_4" />
             </RadioGroup>
 
             <Button
@@ -133,7 +133,7 @@
                 android:layout_below="@id/radio1"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="24dp"
-                android:text="Submit"
+                android:text="@string/submit"
                 android:onClick="submitQuiz"/>
 
             <Button
@@ -144,7 +144,7 @@
                 android:layout_below="@id/radio1"
                 android:layout_marginRight="24dp"
                 android:layout_marginTop="24dp"
-                android:text="Next"
+                android:text="@string/next"
                 android:visibility="gone"
                 android:onClick="nextQuiz"/>
         </RelativeLayout>
@@ -175,7 +175,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
-                android:text="Question II."
+                android:text="@string/question_ii"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -185,7 +185,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/title2"
                 android:padding="16dp"
-                android:text="Read and make correct answer:" />
+                android:text="@string/read_and_make_correct_answer" />
 
             <TextView
                 android:id="@+id/question2"
@@ -193,7 +193,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/todo2"
                 android:padding="16dp"
-                android:text="Which of the following is found within mitochondria?"
+                android:text="@string/question2"
                 android:textSize="22sp"
                 android:textStyle="italic" />
 
@@ -208,25 +208,25 @@
                     android:id="@+id/radio2_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="cristae" />
+                    android:text="@string/answer2_1" />
 
                 <RadioButton
                     android:id="@+id/radio2_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Golgi apparatus" />
+                    android:text="@string/answer2_2" />
 
                 <RadioButton
                     android:id="@+id/radio2_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="endoplasmic reticulum" />
+                    android:text="@string/answer2_3" />
 
                 <RadioButton
                     android:id="@+id/radio2_4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="patella" />
+                    android:text="@string/answer2_4" />
             </RadioGroup>
 
             <Button
@@ -237,7 +237,7 @@
                 android:layout_below="@id/radio2"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="24dp"
-                android:text="Submit"
+                android:text="@string/submit"
                 android:onClick="submitQuiz"/>
 
             <Button
@@ -248,7 +248,7 @@
                 android:layout_below="@id/radio2"
                 android:layout_marginRight="24dp"
                 android:layout_marginTop="24dp"
-                android:text="Next"
+                android:text="@string/next"
                 android:visibility="gone"
                 android:onClick="nextQuiz"/>
         </RelativeLayout>
@@ -280,7 +280,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
-                android:text="Question III."
+                android:text="@string/question_iii"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -291,7 +291,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/title3"
                 android:padding="16dp"
-                android:text="Choose all correct answers:" />
+                android:text="@string/choose_all_correct_answers" />
 
             <TextView
                 android:id="@+id/question3"
@@ -299,7 +299,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/todo3"
                 android:padding="16dp"
-                android:text="What else can bacteria (such as E. coli) use sugars for besides energy? "
+                android:text="@string/question3"
                 android:textSize="22sp"
                 android:textStyle="italic" />
 
@@ -316,7 +316,7 @@
                         android:id="@+id/check3_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="carbon source to build amino acids" />
+                        android:text="@string/answer3_1" />
                 </TableRow>
 
                 <TableRow>
@@ -325,7 +325,7 @@
                         android:id="@+id/check3_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="carbon source to make vitamins" />
+                        android:text="@string/answer3_2" />
                 </TableRow>
 
                 <TableRow>
@@ -334,7 +334,7 @@
                         android:id="@+id/check3_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="nitrogen source for making a nucleic acid's base" />
+                        android:text="@string/answer3_3" />
                 </TableRow>
 
                 <TableRow>
@@ -343,7 +343,7 @@
                         android:id="@+id/check3_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="sulfur source for making cysteine (an amino acid)" />
+                        android:text="@string/answer3_4" />
                 </TableRow>
             </TableLayout>
 
@@ -355,7 +355,7 @@
                 android:layout_below="@id/table3"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="24dp"
-                android:text="Submit"
+                android:text="@string/submit"
                 android:onClick="submitQuiz"/>
 
             <Button
@@ -366,7 +366,7 @@
                 android:layout_below="@id/table3"
                 android:layout_marginRight="24dp"
                 android:layout_marginTop="24dp"
-                android:text="Next"
+                android:text="@string/next"
                 android:visibility="gone"
                 android:onClick="nextQuiz"/>
         </RelativeLayout>
@@ -398,7 +398,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
-                android:text="Question IV."
+                android:text="@string/question_iv"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -409,7 +409,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/title4"
                 android:padding="16dp"
-                android:text="Write a correct answer:" />
+                android:text="@string/write_a_correct_answer" />
 
             <TextView
                 android:id="@+id/question4"
@@ -417,7 +417,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/todo4"
                 android:padding="16dp"
-                android:text="Linstowiids are a tapeworm parasite found in the mouse opossum, a marsupial from South America. Where is the only other place that linstowiid tapeworms are found?"
+                android:text="@string/question4"
                 android:textSize="22sp"
                 android:textStyle="italic" />
 
@@ -435,7 +435,7 @@
                 android:layout_below="@id/edit4"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="24dp"
-                android:text="Submit"
+                android:text="@string/submit"
                 android:onClick="submitQuiz"/>
 
             <Button
@@ -446,7 +446,7 @@
                 android:layout_below="@id/edit4"
                 android:layout_marginRight="24dp"
                 android:layout_marginTop="24dp"
-                android:text="Next"
+                android:text="@string/next"
                 android:visibility="gone"
                 android:onClick="nextQuiz"/>
 
@@ -478,7 +478,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
-                android:text="Question V."
+                android:text="@string/question_v"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -489,7 +489,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/title5"
                 android:padding="16dp"
-                android:text="Choose all correct answers:" />
+                android:text="@string/choose_all_correct_answers" />
 
             <TextView
                 android:id="@+id/question5"
@@ -497,7 +497,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/todo5"
                 android:padding="16dp"
-                android:text="Which of the following are true?"
+                android:text="@string/question5"
                 android:textSize="22sp"
                 android:textStyle="italic" />
 
@@ -514,7 +514,7 @@
                         android:id="@+id/check5_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="we all have normal tumor suppressor genes" />
+                        android:text="@string/answer5_1" />
                 </TableRow>
 
                 <TableRow>
@@ -523,7 +523,7 @@
                         android:id="@+id/check5_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="mutations in tumor suppressor genes can contribute to cancer" />
+                        android:text="@string/answer5_2" />
                 </TableRow>
 
                 <TableRow>
@@ -532,7 +532,7 @@
                         android:id="@+id/check5_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="we all have mutations in our genome" />
+                        android:text="@string/answer5_3" />
                 </TableRow>
 
                 <TableRow>
@@ -541,7 +541,7 @@
                         android:id="@+id/check5_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="mutations in any gene can contribute to cancer" />
+                        android:text="@string/answer5_4" />
                 </TableRow>
             </TableLayout>
 
@@ -553,7 +553,7 @@
                 android:layout_below="@id/table5"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="24dp"
-                android:text="Submit"
+                android:text="@string/submit"
                 android:onClick="submitQuiz"/>
 
             <Button
@@ -591,30 +591,31 @@
                 android:src="@drawable/pic_results" />
 
             <TextView
-                android:id="@+id/title6"
+                android:id="@+id/title_results"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
-                android:text="Results:"
+                android:text="@string/results"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
 
             <TextView
-                android:id="@+id/todo6"
+                android:id="@+id/score_results"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/title6"
+                android:layout_below="@id/title_results"
                 android:padding="16dp"
                 android:textSize="56sp"
-                android:text="0/0" />
+                android:text="" />
 
             <TextView
+                android:id="@+id/remark_results"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/todo6"
+                android:layout_below="@id/score_results"
                 android:padding="16dp"
-                android:text="Congratulations! You correctly answered 5 of 5 questions"
+                android:text=""
                 android:textSize="22sp"
                 android:textStyle="italic" />
 
@@ -624,7 +625,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="24dp"
-                android:text="Start again"
+                android:text="@string/start_again"
                 android:onClick="startAgain"/>
 
 
