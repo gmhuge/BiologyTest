@@ -41,8 +41,8 @@
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="24dp"
-                android:text="@string/start"
-                android:onClick="nextQuiz"/>
+                android:onClick="nextQuiz"
+                android:text="@string/start" />
         </RelativeLayout>
     </ScrollView>
 
@@ -133,8 +133,8 @@
                 android:layout_below="@id/radio1"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="24dp"
-                android:text="@string/submit"
-                android:onClick="submitQuiz"/>
+                android:onClick="submitQuiz"
+                android:text="@string/submit" />
 
             <Button
                 android:id="@+id/next1"
@@ -144,9 +144,9 @@
                 android:layout_below="@id/radio1"
                 android:layout_marginRight="24dp"
                 android:layout_marginTop="24dp"
+                android:onClick="nextQuiz"
                 android:text="@string/next"
-                android:visibility="gone"
-                android:onClick="nextQuiz"/>
+                android:visibility="gone" />
         </RelativeLayout>
     </ScrollView>
 
@@ -237,8 +237,8 @@
                 android:layout_below="@id/radio2"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="24dp"
-                android:text="@string/submit"
-                android:onClick="submitQuiz"/>
+                android:onClick="submitQuiz"
+                android:text="@string/submit" />
 
             <Button
                 android:id="@+id/next2"
@@ -248,9 +248,9 @@
                 android:layout_below="@id/radio2"
                 android:layout_marginRight="24dp"
                 android:layout_marginTop="24dp"
+                android:onClick="nextQuiz"
                 android:text="@string/next"
-                android:visibility="gone"
-                android:onClick="nextQuiz"/>
+                android:visibility="gone" />
         </RelativeLayout>
     </ScrollView>
 
@@ -355,8 +355,8 @@
                 android:layout_below="@id/table3"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="24dp"
-                android:text="@string/submit"
-                android:onClick="submitQuiz"/>
+                android:onClick="submitQuiz"
+                android:text="@string/submit" />
 
             <Button
                 android:id="@+id/next3"
@@ -366,9 +366,9 @@
                 android:layout_below="@id/table3"
                 android:layout_marginRight="24dp"
                 android:layout_marginTop="24dp"
+                android:onClick="nextQuiz"
                 android:text="@string/next"
-                android:visibility="gone"
-                android:onClick="nextQuiz"/>
+                android:visibility="gone" />
         </RelativeLayout>
     </ScrollView>
 
@@ -422,10 +422,10 @@
                 android:textStyle="italic" />
 
             <EditText
+                android:id="@+id/edit4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/edit4"
-                android:layout_below="@id/question4"/>
+                android:layout_below="@id/question4" />
 
             <Button
                 android:id="@+id/quiz4submit"
@@ -435,8 +435,8 @@
                 android:layout_below="@id/edit4"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="24dp"
-                android:text="@string/submit"
-                android:onClick="submitQuiz"/>
+                android:onClick="submitQuiz"
+                android:text="@string/submit" />
 
             <Button
                 android:id="@+id/next4"
@@ -446,9 +446,9 @@
                 android:layout_below="@id/edit4"
                 android:layout_marginRight="24dp"
                 android:layout_marginTop="24dp"
+                android:onClick="nextQuiz"
                 android:text="@string/next"
-                android:visibility="gone"
-                android:onClick="nextQuiz"/>
+                android:visibility="gone" />
 
         </RelativeLayout>
     </ScrollView>
@@ -553,8 +553,8 @@
                 android:layout_below="@id/table5"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="24dp"
-                android:text="@string/submit"
-                android:onClick="submitQuiz"/>
+                android:onClick="submitQuiz"
+                android:text="@string/submit" />
 
             <Button
                 android:id="@+id/next5"
@@ -564,9 +564,9 @@
                 android:layout_below="@id/table5"
                 android:layout_marginRight="24dp"
                 android:layout_marginTop="24dp"
+                android:onClick="nextQuiz"
                 android:text="See Result"
-                android:visibility="gone"
-                android:onClick="nextQuiz"/>
+                android:visibility="gone" />
         </RelativeLayout>
     </ScrollView>
 
@@ -606,8 +606,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/title_results"
                 android:padding="16dp"
-                android:textSize="56sp"
-                android:text="" />
+                android:text=""
+                android:textSize="56sp" />
 
             <TextView
                 android:id="@+id/remark_results"
@@ -625,9 +625,8 @@
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="24dp"
-                android:text="@string/start_again"
-                android:onClick="startAgain"/>
-
+                android:onClick="startAgain"
+                android:text="@string/start_again" />
 
         </RelativeLayout>
     </ScrollView>
